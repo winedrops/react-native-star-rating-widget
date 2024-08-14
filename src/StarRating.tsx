@@ -80,14 +80,11 @@ const StarRating: React.FC<StarRatingProps> = ({
           )
         );
         const finalRating = enableHalfStar ? newRating : Math.ceil(newRating);
-        if (finalRating !== rating) {
-          onChange(finalRating);
-        } else {
-          onChange(0);
-        }
+
+        onChange(finalRating);
       }
     },
-    [enableHalfStar, maxStars, onChange, rating]
+    [enableHalfStar, maxStars, onChange]
   );
 
   const panResponder = React.useMemo(() => {
