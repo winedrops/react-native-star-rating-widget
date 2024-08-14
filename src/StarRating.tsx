@@ -82,6 +82,8 @@ const StarRating: React.FC<StarRatingProps> = ({
         const finalRating = enableHalfStar ? newRating : Math.ceil(newRating);
         if (finalRating !== rating) {
           onChange(finalRating);
+        } else {
+          onChange(0);
         }
       }
     },
