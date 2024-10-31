@@ -23,6 +23,7 @@ type StarRatingProps = {
   rating: number;
   onChange: (rating: number) => void;
   color?: string;
+  borderColor?: string;
   emptyColor?: string;
   maxStars?: number;
   starSize?: number;
@@ -51,6 +52,7 @@ const StarRating: React.FC<StarRatingProps> = ({
   starSize = 32,
   onChange,
   color = defaultColor,
+  borderColor,
   emptyColor = color,
   enableHalfStar = true,
   enableSwiping = true,
@@ -141,6 +143,7 @@ const StarRating: React.FC<StarRatingProps> = ({
                 type={starType}
                 size={starSize}
                 color={starType === 'empty' ? emptyColor : color}
+                borderColor={borderColor}
               />
             </AnimatedIcon>
           );

@@ -11,6 +11,7 @@ type StarRatingProps = {
     rating: number;
     onChange: (rating: number) => void;
     color?: string;
+    borderColor?: string;
     emptyColor?: string;
     maxStars?: number;
     starSize?: number;
